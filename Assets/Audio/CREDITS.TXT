@@ -1,0 +1,165 @@
+###############################################
+OpenGameArt.org automatically generated credits file notice:
+
+THIS FILE IS FOR INFORMATIONAL PURPOSES ONLY.  NO WARRANTY OF ANY KIND IS EXPRESSED OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NONINFRINGEMENT. IN NO EVENT SHALL OPENGAMEART.ORG BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT, OR OTHERWISE, ARISING FROM, OUT OF, OR IN CONNECTION WITH THE USE OF THIS FILE OR THE INFORMATION IN IT.
+
+In plain English:  This credits file is automatically generated to the best of our ability, but it remains YOUR RESPONSIBILITY as a game developer to ensure that the art you use is attributed properly.  That is, we can't be held liable even if all of the information in this file is completely wrong.   In addition, some of the art listed in this file may have SPECIAL ATTRIBUTION INSTRUCTIONS that ask that you credit the artist in a particular way, rather than a verbatim copyright notice.  In those cases, you will probably need to hand-edit this file to comply with their instructions.  In some older art, attribution instructions may be included in the art description itself.  Please check the art page to be sure.
+
+We recommend that you delete this notice when you're sure the information here is correct and the attribution instructions are properly followed.  If you aren't the game developer and you're seeing this notice here in the credits, it probably means that the developer hasn't properly verified the attribution information contained herein even though it said they were supposed to do it right on the page where they downloaded this file.  
+###############################################
+
+Title:
+    512 Sound Effects (8-bit style)
+
+Author:
+    SubspaceAudio
+
+URL:
+    https://opengameart.org/content/512-sound-effects-8-bit-style
+
+License(s):
+    * CC0 ( http://creativecommons.org/publicdomain/zero/1.0/legalcode )
+
+File(s):
+    * The Essential Retro Video Game Sound Effects Collection [512 sounds].zip
+
+----------------------------------------
+
+Title:
+    20 excellent 8 bit loops
+
+Author:
+    Snabisch
+
+URL:
+    https://opengameart.org/content/20-excellent-8-bit-loops
+
+License(s):
+    * CC-BY 3.0 ( http://creativecommons.org/licenses/by/3.0/legalcode )
+
+Copyright/Attribution Notice:
+    https://makeagame.bandcamp.com/
+
+File(s):
+    * VIdeogame Loops.zip
+
+----------------------------------------
+
+Title:
+    4 Chiptunes (Adventure)
+
+Author:
+    SubspaceAudio
+
+URL:
+    https://opengameart.org/content/4-chiptunes-adventure
+
+License(s):
+    * CC0 ( http://creativecommons.org/publicdomain/zero/1.0/legalcode )
+
+File(s):
+    * Juhani Junkala [Chiptune Adventures] OGG.zip
+    * Juhani Junkala [Chiptune Adventures] WAV.zip
+
+----------------------------------------
+
+Title:
+    8-bit Retro Sfx
+
+Author:
+    Christian DeTamble
+
+URL:
+    https://opengameart.org/content/8-bit-retro-sfx
+
+License(s):
+    * CC-BY 3.0 ( http://creativecommons.org/licenses/by/3.0/legalcode )
+
+Copyright/Attribution Notice:
+    Attribution is optional but appreciated. You can use: "Christian DeTamble - http://therefactory.bplaced.net"
+
+File(s):
+    * collect.ogg
+    * explosion.ogg
+    * fridged.ogg
+    * select.ogg
+    * spawn.ogg
+
+----------------------------------------
+
+Title:
+    Leap [8bit]
+
+Author:
+    nene
+
+URL:
+    https://opengameart.org/content/leap-8bit
+
+License(s):
+    * CC0 ( http://creativecommons.org/publicdomain/zero/1.0/legalcode )
+
+File(s):
+    * leap.WAV
+    * leap.mid
+
+----------------------------------------
+
+Title:
+    Long Away Home [8bit]
+
+Author:
+    nene
+
+URL:
+    https://opengameart.org/content/long-away-home-8bit
+
+License(s):
+    * CC0 ( http://creativecommons.org/publicdomain/zero/1.0/legalcode )
+
+File(s):
+    * Long Away Home.mid
+    * Long Away Home.wav
+
+----------------------------------------
+
+Title:
+    Boss Battle #2 ["8 bit"]
+
+Author:
+    nene
+
+URL:
+    https://opengameart.org/content/boss-battle-2-8-bit
+
+License(s):
+    * CC0 ( http://creativecommons.org/publicdomain/zero/1.0/legalcode )
+
+File(s):
+    * boss_battle_#2.mid
+    * boss_battle_#2.WAV
+
+----------------------------------------
+
+Title:
+    Victory Fanfare Short
+
+Author:
+    cynicmusic
+
+URL:
+    https://opengameart.org/content/victory-fanfare-short
+
+License(s):
+    * CC0 ( http://creativecommons.org/publicdomain/zero/1.0/legalcode )
+
+Copyright/Attribution Notice:
+    http://cynicmusic.com http://pixelsphere.org
+
+
+File(s):
+    * Heavy_ConceptB.wav
+
+----------------------------------------
+
+

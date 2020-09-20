@@ -10,6 +10,8 @@ public class PacmanMove : MonoBehaviour
     public int hp = 3;
     public float speed = 0.4f;
     Vector2 dest = Vector2.zero;
+    public AudioSource eatPellet;
+    public AudioSource collideWall;
 
     bool valid(Vector2 dir)
     {
@@ -58,5 +60,17 @@ public class PacmanMove : MonoBehaviour
         GetComponent<Animator>().SetFloat("DirY", dir.y);
 
         scoreText.text = "HP:" + hp.ToString() + "     Scores: " + scoreCounter.ToString();
+    }
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.name == "pacdot")
+        {
+            scoreCounter += 1;
+            eatPellet.Play();
+        }
+        if (other.name == "maze")
+        {
+            collideWall.Play();
+        }
     }
 }
