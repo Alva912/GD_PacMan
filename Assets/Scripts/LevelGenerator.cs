@@ -4,15 +4,7 @@ using UnityEngine;
 
 public class LevelGenerator : MonoBehaviour
 {
-    public GameObject Empty;
-    public GameObject OutsideCorner;
-    public GameObject OutsideWall;
-    public GameObject InsideCorner;
-    public GameObject InsideWall;
-    public GameObject StandardPellet;
-    public GameObject PowerPellet;
-    public GameObject TJunction;
-    private Quaternion rotate;
+    public GameObject Empty, OutsideCorner, OutsideWall, InsideCorner, InsideWall, StandardPellet, PowerPellet, TJunction;
 
     void Awake()
     {
@@ -34,116 +26,97 @@ public class LevelGenerator : MonoBehaviour
             {0,0,0,0,0,0,5,0,0,0,4,0,0,0},
         };
 
+        int[,] levelMapRotate = {
+            {0,-90,-90,-90,-90,-90,-90,-90,-90,-90,-90,-90,-90,0},
+            {0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+            {0,0,0,-90,-90,-90,0,0,-90,-90,-90,-90,0,0},
+            {0,0,0,0,0,180,0,0,0,0,0,180,0,0},
+            {0,0,90,90,90,180,0,90,90,90,90,180,0,90},
+            {0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+            {0,0,0,-90,-90,-90,0,0,-90,0,0,-90,-90,-90},
+            {0,0,90,90,90,180,0,0,180,0,90,90,90,-90},
+            {0,0,0,0,0,0,0,0,180,0,0,0,0,0},
+            {90,90,90,90,90,-90,0,0,90,-90,-90,-90,0,0},
+            {0,0,0,0,0,0,0,0,0,90,90,180,0,90},
+            {0,0,0,0,0,0,0,0,180,0,0,0,0,0},
+            {0,0,0,0,0,0,0,0,180,0,0,-90,-90,0},
+            {90,90,90,90,90,180,0,90,180,0,0,0,0,0},
+            {0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+        };
+
         for (int x = 0; x < levelMap.GetLength(0); x++)
         {
             for (int y = 0; y < levelMap.GetLength(1); y++)
             {
                 int i = levelMap[x, y];
-                int up = 0;
-                int down = 0;
-                int right = 0;
-                int left = 0;
-                // LoadMap(i, x, y);
-                if (x < levelMap.GetLength(0) - 1)
-                {
-                    down = levelMap[x + 1, y];
-                }
-                if (x > 0)
-                {
-                    up = levelMap[x - 1, y];
-                }
-                if (y < levelMap.GetLength(1) - 1)
-                {
-                    right = levelMap[x, y + 1];
-                }
-                if (y > 0)
-                {
-                    left = levelMap[x, y - 1];
-                }
+                Quaternion rotate = Quaternion.Euler(0, 0, levelMapRotate[x, y]);
 
                 if (i == 1)
                 {
-                    rotate = Quaternion.Euler(0, 0, 0);
-                    if (up == 2 & right == 2)
-                    {
-                        rotate = Quaternion.Euler(0, 0, 90);
-                    }
-                    if (up == 2 & left == 2)
-                    {
-                        rotate = Quaternion.Euler(180, 180, 0);
-                    }
-                    if (down == 2 & left == 2)
-                    {
-                        rotate = Quaternion.Euler(0, 0, -90);
-                    }
-                    Instantiate(OutsideCorner, new Vector3(y+1, -x+31, 0), rotate);
+                    Instantiate(OutsideCorner, new Vector3(y + 1, -x + 31, 0), rotate, transform.GetChild(0));
+                    Instantiate(OutsideCorner, new Vector3(y + 1, -x + 31, 0), rotate, transform.GetChild(1));
+                    Instantiate(OutsideCorner, new Vector3(y + 1, -x + 31, 0), rotate, transform.GetChild(2));
+                    Instantiate(OutsideCorner, new Vector3(y + 1, -x + 31, 0), rotate, transform.GetChild(3));
                 }
                 if (i == 2)
                 {
-                    rotate = Quaternion.Euler(0, 0, 0);
-                    if (up == 5)
-                    {
-                        rotate = Quaternion.Euler(0, 0, 90);
-                    }
-                    if (down == 5)
-                    {
-                        rotate = Quaternion.Euler(0, 0, -90);
-                    }
-                    Instantiate(OutsideWall, new Vector3(y+1, -x+31, 0), rotate);
+                    Instantiate(OutsideWall, new Vector3(y + 1, -x + 31, 0), rotate, transform.GetChild(0));
+                    Instantiate(OutsideWall, new Vector3(y + 1, -x + 31, 0), rotate, transform.GetChild(1));
+                    Instantiate(OutsideWall, new Vector3(y + 1, -x + 31, 0), rotate, transform.GetChild(2));
+                    Instantiate(OutsideWall, new Vector3(y + 1, -x + 31, 0), rotate, transform.GetChild(3));
                 }
                 if (i == 3)
                 {
-                    rotate = Quaternion.Euler(0, 0, 0);
-                    if (up == (3 | 4))
-                    {
-                        if (right == (3 | 4))
-                        {
-                            rotate = Quaternion.Euler(0, 0, 90);
-                        }
-                        if (left == (3 | 4))
-                        {
-                            rotate = Quaternion.Euler(0, 0, 180);
-                        }
-                    }
-                    if (down == (3 | 4))
-                    {
-                        if (left == (3 | 4))
-                        {
-                            rotate = Quaternion.Euler(0, 0, -90);
-                        }
-                    }
-                    Instantiate(InsideCorner, new Vector3(y+1, -x+31, 0), rotate);
+                    Instantiate(InsideCorner, new Vector3(y + 1, -x + 31, 0), rotate, transform.GetChild(0));
+                    Instantiate(InsideCorner, new Vector3(y + 1, -x + 31, 0), rotate, transform.GetChild(1));
+                    Instantiate(InsideCorner, new Vector3(y + 1, -x + 31, 0), rotate, transform.GetChild(2));
+                    Instantiate(InsideCorner, new Vector3(y + 1, -x + 31, 0), rotate, transform.GetChild(3));
                 }
                 if (i == 4)
                 {
-                    rotate = Quaternion.Euler(0, 0, 0);
-                    if (up == 5)
-                    {
-                        rotate = Quaternion.Euler(0, 0, -90);
-                    }
-                    if (down == 5)
-                    {
-                        rotate = Quaternion.Euler(0, 0, 90);
-                    }
-                    Instantiate(InsideWall, new Vector3(y+1, -x+31, 0), rotate);
+                    Instantiate(InsideWall, new Vector3(y + 1, -x + 31, 0), rotate, transform.GetChild(0));
+                    Instantiate(InsideWall, new Vector3(y + 1, -x + 31, 0), rotate, transform.GetChild(1));
+                    Instantiate(InsideWall, new Vector3(y + 1, -x + 31, 0), rotate, transform.GetChild(2));
+                    Instantiate(InsideWall, new Vector3(y + 1, -x + 31, 0), rotate, transform.GetChild(3));
                 }
                 if (i == 5)
                 {
-                    Instantiate(StandardPellet, new Vector3(y+1, -x+31, 0), Quaternion.identity);
+                    Instantiate(StandardPellet, new Vector3(y + 1, -x + 31, 0), rotate, transform.GetChild(0));
+                    Instantiate(StandardPellet, new Vector3(y + 1, -x + 31, 0), rotate, transform.GetChild(1));
+                    Instantiate(StandardPellet, new Vector3(y + 1, -x + 31, 0), rotate, transform.GetChild(2));
+                    Instantiate(StandardPellet, new Vector3(y + 1, -x + 31, 0), rotate, transform.GetChild(3));
                 }
                 if (i == 6)
                 {
-                    Instantiate(PowerPellet, new Vector3(y+1, -x+31, 0), Quaternion.identity);
+                    Instantiate(PowerPellet, new Vector3(y + 1, -x + 31, 0), rotate, transform.GetChild(0));
+                    Instantiate(PowerPellet, new Vector3(y + 1, -x + 31, 0), rotate, transform.GetChild(1));
+                    Instantiate(PowerPellet, new Vector3(y + 1, -x + 31, 0), rotate, transform.GetChild(2));
+                    Instantiate(PowerPellet, new Vector3(y + 1, -x + 31, 0), rotate, transform.GetChild(3));
                 }
                 if (i == 7)
                 {
-                    Instantiate(TJunction, new Vector3(y+1, -x+31, 0), Quaternion.identity);
+                    Instantiate(TJunction, new Vector3(y + 1, -x + 31, 0), rotate, transform.GetChild(0));
+                    Instantiate(TJunction, new Vector3(y + 1, -x + 31, 0), rotate, transform.GetChild(1));
+                    Instantiate(TJunction, new Vector3(y + 1, -x + 31, 0), rotate, transform.GetChild(2));
+                    Instantiate(TJunction, new Vector3(y + 1, -x + 31, 0), rotate, transform.GetChild(3));
                 }
             }
         }
-    }
-    void Start()
-    {
 
+        for (int i = 0; i < 4; i++)
+        {
+            transform.GetChild(i).GetChild(106).position += new Vector3(-0.125f, -0.125f, 0);
+            transform.GetChild(i).GetChild(126).position += new Vector3(-0.25f, -0.25f, 0);
+            transform.GetChild(i).GetChild(129).position += new Vector3(0.125f, 0.125f, 0);
+            transform.GetChild(i).GetChild(137).position += new Vector3(0.125f, -0.125f, 0);
+            transform.GetChild(i).GetChild(158).position += new Vector3(-0.25f, 0, 0);
+        }
+
+        transform.GetChild(1).position = new Vector3(29, 0, 0);
+        transform.GetChild(1).rotation = Quaternion.Euler(180, 0, 180);
+        transform.GetChild(2).position = new Vector3(0, 33, 0);
+        transform.GetChild(2).rotation = Quaternion.Euler(0, 180, 180);
+        transform.GetChild(3).position = new Vector3(29, 33, 0);
+        transform.GetChild(3).rotation = Quaternion.Euler(0, 0, 180);
     }
 }
